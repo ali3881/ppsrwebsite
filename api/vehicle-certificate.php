@@ -1,8 +1,8 @@
 <?php
 
 // Adjust path based on actual location of client files relative to this 'api' directory
-require_once __DIR__ . '/../InfoAgentAuthClient.php';
-require_once __DIR__ . '/../VehicleReportClient.php';
+require_once __DIR__ . '/../lib/InfoAgentAuthClient.php';
+require_once __DIR__ . '/../lib/VehicleReportClient.php';
 
 // IMPORTANT: Hardcoded credentials for demonstration.
 // In a production environment, store these securely (e.g., environment variables, secure config file).
