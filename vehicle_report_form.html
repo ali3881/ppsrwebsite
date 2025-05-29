@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Report Lookup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Vehicle Safety Report Lookup</h2>
+        <form id="vehicleReportForm">
+            <div class="form-group">
+                <label for="searchType">Search Type:</label>
+                <select id="searchType" name="searchType">
+                    <option value="vin" selected>VIN</option>
+                    <option value="plateAndState">Plate and State</option>
+                    <option value="chassisAndMake">Chassis and Make</option>
+                </select>
+            </div>
+
+            <div id="vinGroup" class="form-group">
+                <label for="vinInput">VIN:</label>
+                <input type="text" id="vinInput" name="vin">
+            </div>
+
+            <div id="plateStateGroup" class="form-group input-group hidden">
+                <div>
+                    <label for="plateNumberInput">Plate Number:</label>
+                    <input type="text" id="plateNumberInput" name="plateNumber">
+                </div>
+                <div>
+                    <label for="stateInput">State:</label>
+                    <select id="stateInput" name="state">
+                        <option value="">Select State</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NSW">NSW</option>
+                        <option value="NT">NT</option>
+                        <option value="QLD">QLD</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="VIC">VIC</option>
+                        <option value="WA">WA</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="chassisMakeGroup" class="form-group input-group hidden">
+                <div>
+                    <label for="chassisNumberInput">Chassis Number:</label>
+                    <input type="text" id="chassisNumberInput" name="chassisNumber">
+                </div>
+                <div>
+                    <label for="makeInput">Make:</label>
+                    <input type="text" id="makeInput" name="make">
+                </div>
+            </div>
+
+            <button type="submit" id="submitReportRequest">Get Report</button>
+        </form>
+
+        <div id="loadingIndicator" class="hidden">Loading...</div>
+        <div id="reportResultArea">
+            <div id="reportTextContent"></div> <!-- For existing text like "Report data would appear here" -->
+            <div id="certificateActionsArea" class="hidden"></div> <!-- New area for certificate button -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
